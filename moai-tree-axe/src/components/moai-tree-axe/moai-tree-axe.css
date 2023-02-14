@@ -1,0 +1,107 @@
+/**
+ * Centre Text 
+ */
+#moai-tree-axe * {
+    text-align: center;
+}
+
+/**
+ * Container
+ */
+#moai-tree-axe {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/**
+ * Layout
+ */
+
+#moai-tree-axe h1,
+#moai-tree-axe footer {
+    width: 100%;
+}
+
+#moai-tree-axe section {
+    width: 50%;
+}
+
+/**
+ * Header
+ */
+
+#moai-tree-axe h1 {
+    color: white;
+    background: black;
+    padding: 1em;
+    margin: 0;
+}
+
+/**
+ * Avatar
+ */
+
+#moai-tree-axe .avatar {
+    font-size: 7.5em;
+    margin-bottom: 1rem;
+}
+
+/**
+ * Player
+ */
+
+#moai-tree-axe .player {
+
+}
+
+#moai-tree-axe .choices {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#moai-tree-axe .choices li {
+    font-size: 2rem;
+    padding: 0;
+    margin: 1em;
+    outline: none;
+    text-shadow: 0 0 0 transparent;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.1s ease all;
+}
+
+#moai-tree-axe .choices li:hover,
+#moai-tree-axe .choices li:focus,
+#moai-tree-axe .choices li:active {
+    outline: none;
+    text-shadow: 0.15rem 0.15rem 0.25rem black;
+    transform: scale(1.2);
+}
+
+/**
+ * Computer
+ */
+
+#moai-tree-axe .computer {
+    
+}
+
+#moai-tree-axe .computer .choices li {
+    pointer-events: none;
+}
+
+/**
+ * Footer
+ */
+
+#moai-tree-axe footer {
+    color: white;
+    background: black;
+    box-shadow: 0 1000px 0 1000px black;
+}
