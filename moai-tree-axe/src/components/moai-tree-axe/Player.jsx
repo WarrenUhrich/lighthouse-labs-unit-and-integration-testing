@@ -1,4 +1,4 @@
-export default function Player() {
+export default function Player(props) {
     return (
         <section className="player">
             <p>
@@ -6,9 +6,18 @@ export default function Player() {
                 Your destiny is yours to choose:
             </p>
             <ul className="choices">
-                <li tabIndex={0}>🗿</li>
-                <li tabIndex={0}>🌳</li>
-                <li tabIndex={0}>🪓</li>
+                <li tabIndex={0} onClick={() => { props.setPlayerChoice(prev=> ({...prev, choice: '🗿'})); }}>
+                    {props.playerChoice.choice === '🗿' ? '✔' : ''}
+                    🗿
+                </li>
+                <li tabIndex={0} onClick={() => { props.setPlayerChoice(prev=> ({...prev, choice: '🌳'})); }}>
+                    {props.playerChoice.choice === '🌳' ? '✔' : ''}
+                    🌳
+                </li>
+                <li tabIndex={0} onClick={() => { props.setPlayerChoice(prev=> ({...prev, choice: '🪓'})); }}>
+                    {props.playerChoice.choice === '🪓' ? '✔' : ''}
+                    🪓
+                </li>
             </ul>
         </section>
     );

@@ -13,7 +13,7 @@ export const pickWinningOption = (playerChoice) => {
         case '🪓':
             return '🗿';
         default:
-            // throw new Error('Invalid selection.');
+            throw new Error('Invalid selection.');
     }
 };
 
@@ -36,9 +36,9 @@ export const getResult = (playerChoice, computerChoice) => {
         '🗿': '🪓',
     };
 
-    // if(Object.keys(opposites).includes(playerChoice) === false || Object.keys(opposites).includes(computerChoice) === false) {
-    //     throw new Error('Invalid emojis.');
-    // }
+    if(Object.keys(opposites).includes(playerChoice) === false || Object.keys(opposites).includes(computerChoice) === false) {
+        throw new Error('Invalid emojis.');
+    }
 
     if(playerChoice === computerChoice) {
         return TIE_MESSAGE;

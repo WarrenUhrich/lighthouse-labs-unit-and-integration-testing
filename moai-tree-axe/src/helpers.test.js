@@ -21,10 +21,11 @@ describe('pickWinningOption function', () => {
         expect(result).toBe('🗿');
     });
 
-    // it('throws an error if given invalid input', () => {
-    //     const result = pickWinningOption('123');
-    //     // expect(result).toThrow(Error);
-    // }); 
+    it('throws an error if given invalid input', () => {
+        expect(() => {
+            pickWinningOption('123');
+        }).toThrow('Invalid selection.');
+    }); 
 });
 
 describe('pickRandomOption function', () => {
@@ -55,8 +56,9 @@ describe('getResult function', () => {
        expect(result).toBe('YOU LOSE!');
     });
 
-    // it('throws an error if given invalid input', () => {
-    //     const result = getResult('123', '123');
-    //     expect(result).toThrow('Invalid emojis.');
-    // }); 
+    it('throws an error if given invalid input', () => {
+        expect(() => {
+            getResult('123', '123');
+        }).toThrow('Invalid emojis.');
+    }); 
 });
