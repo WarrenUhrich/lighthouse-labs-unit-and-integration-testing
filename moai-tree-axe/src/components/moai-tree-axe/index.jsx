@@ -5,14 +5,6 @@ import Computer from './Computer';
 import Footer from './Footer';
 import {useState} from 'react';
 
-/**
- * What does this app need?
- * * Player Choice --> here
- * * Computer Choice --> here
- * * Results (MESSAGE) --> Footer
- * * Cheating (true || false) --> here
- */
-
 export default function MoaiAxeTree() {
     const [playerChoice, setPlayerChoice] = useState({choice: undefined});
     const [computerChoice, setComputerChoice] = useState({choice: undefined});

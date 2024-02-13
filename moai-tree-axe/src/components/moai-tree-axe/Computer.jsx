@@ -2,17 +2,6 @@ import {useEffect} from 'react';
 import { pickWinningOption, pickRandomOption } from '../../helpers';
 
 export default function Computer(props) {
-    useEffect(() => {
-        if(props.playerChoice.choice) {
-            if(props.cheating) {
-                const pcChoice = pickWinningOption(props.playerChoice.choice);
-                props.setComputerChoice(prev => ({...prev, choice: pcChoice}));
-            } else {
-                const pcChoice = pickRandomOption();
-                props.setComputerChoice(prev => ({...prev, choice: pcChoice}));
-            }
-        }
-    }, [props.playerChoice.choice]);
     return (
         <section className="computer">
             <p>
